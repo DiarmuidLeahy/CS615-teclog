@@ -20,6 +20,9 @@ if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
 if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
         case 'delete':
+            
+            echo 'Hello';
+            
             $db->deleteNote($activeNoteId);
             $newId = $db->getMaxId();
             setcookie("ACTIVE_NOTE_ID", $newId);
