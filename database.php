@@ -8,6 +8,8 @@ class Db {
     private $pwd = "4d6eb4b7";
     private $db = "michaelteclogdb";
     
+    
+    
     //Creates a PDO conection & sets error mode to exceptions
     public function __construct(){
     
@@ -40,6 +42,7 @@ class Db {
             $this->con->query($sql);
             return true;
         } catch (PDOException $e) {
+            echo 'blah blah blah';
             echo $e->getMessage();
         }
     }
