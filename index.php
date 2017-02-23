@@ -24,7 +24,7 @@ if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
         case 'delete':
             
-            echo 'Hello';
+            //echo 'Hello';
             
             $db->deleteNote($activeNoteId);
             $newId = $db->getMaxId();
