@@ -8,6 +8,9 @@ require_once "database.php";
 //connect to our db
 $db = new Db();
 
+$title ='Mr.';
+$Name = 'Diarmuid Leahy';
+
 if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
     if(!$db->isValid($_COOKIE['ACTIVE_NOTE_ID'])) {
         setcookie("ACTIVE_NOTE_ID", $db->getMaxId());
