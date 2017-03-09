@@ -1,5 +1,7 @@
 {include file="header.tpl" title="miNotes"}
-
+<style type="text/css">
+     #editor {overflow:scroll; max-height:300px}
+</style>
 <div id="container">
     
     <div id="notes-list">
@@ -29,9 +31,15 @@
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
+
                 </form>
                 {/if}
             {/foreach}
+        </div>
+        <div>
+            <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                
+            </div>
         </div>
     </div>
 </div>
@@ -48,5 +56,12 @@
        }
     }
 </script>
+
+<script type="text/javascript">
+    $(document).ready( function {
+        $('#editor')=wysisyg();
+    });
+</script>
+
 
 {include file="footer.tpl"}
