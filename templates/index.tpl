@@ -1,7 +1,7 @@
 {include file="header.tpl" title="miNotes"}
-<style type="text/css">
+<!-- <style type="text/css">
      #editor {overflow:scroll; max-height:300px}
-</style>
+</style> -->
 <div id="container">
     
     <div id="notes-list">
