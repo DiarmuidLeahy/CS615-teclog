@@ -15,6 +15,9 @@ if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
     } else {
         $activeNoteId = $_COOKIE['ACTIVE_NOTE_ID'];
     }
+} else {
+    $_COOKIE['ACTIVE_NOTE_ID'] = 1;
+    $activeNoteId = $_COOKIE['ACTIVE_NOTE_ID'];
 }
 
 
