@@ -21,9 +21,6 @@
             <span class="right">Diarmuid Leahy</span>
         </div>
         <div>
-        <?php 
-            $_COOKIE['ACTIVE_NOTE_ID'] = 1;
-        ?>
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
